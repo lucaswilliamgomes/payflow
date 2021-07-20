@@ -11,9 +11,9 @@ class AuthController {
     if (user != null) {
       _user = user;
       saveUser(user);
-      Navigator.pushReplacementNamed(context, "/home");
+      Navigator.pushNamedAndRemoveUntil(context, "/home", (route) => false);
     } else {
-      Navigator.pushReplacementNamed(context, "/login");
+      Navigator.pushNamedAndRemoveUntil(context, "/login", (route) => false);
     }
   }
 
