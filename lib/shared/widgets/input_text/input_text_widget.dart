@@ -56,7 +56,7 @@ class InputTextWidget extends StatelessWidget {
               ),
               validator: validator,
               controller: controller,
-              initialValue: initialValue == null ? "" : initialValue,
+              initialValue: initialValue,
               onChanged: onChanged,
             ),
             Divider(

@@ -90,7 +90,8 @@ class _BarcodeScannerPageState extends State<BarcodeScannerPage> {
                 bottomNavigationBar: SetLabelButtons(
                     primaryLabel: "Inserir código do boleto",
                     primaryOnPressed: () {
-                      Navigator.pushReplacementNamed(context, "/insert_boleto");
+                      Navigator.pushReplacementNamed(context, "/insert_boleto",
+                          arguments: "");
                     },
                     secondaryLabel: "Adicionar da galeria",
                     secondaryOnPressed: () {})),
@@ -109,7 +110,8 @@ class _BarcodeScannerPageState extends State<BarcodeScannerPage> {
                   },
                   secondaryLabel: "Digitar código",
                   secondaryOnPressed: () {
-                    Navigator.pushReplacementNamed(context, "/insert_boleto");
+                    Navigator.pushReplacementNamed(context, "/insert_boleto",
+                        arguments: "");
                   },
                 );
               } else {
