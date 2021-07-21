@@ -115,7 +115,7 @@ class _InsertBoletoPageState extends State<InsertBoletoPage> {
         secondaryOnPressed: () {
           controller.cadastrarBoleto();
           if (controller.formKey.currentState!.validate()) {
-            Navigator.pop(context);
+            Navigator.pushNamed(context, "/home");
           }
         },
         enableSecondaryColor: true,
