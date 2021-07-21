@@ -51,6 +51,10 @@ class InputTextWidget extends StatelessWidget {
                 ],
               ),
             ),
+            validator: validator,
+            controller: controller,
+            initialValue: initialValue,
+            onChanged: onChanged,
           ),
           Divider(
             height: 1,

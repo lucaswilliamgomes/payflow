@@ -1,5 +1,3 @@
-import 'package:camera/camera.dart';
-
 class BarcodeScannerStatus {
   final bool isAvailable;
   final String error;
@@ -13,8 +11,7 @@ class BarcodeScannerStatus {
     this.stopScanner = false,
   });
 
-  factory BarcodeScannerStatus.available() =>
-      BarcodeScannerStatus(
+  factory BarcodeScannerStatus.available() => BarcodeScannerStatus(
         isAvailable: true,
         stopScanner: false,
       );
