@@ -94,7 +94,9 @@ class _BarcodeScannerPageState extends State<BarcodeScannerPage> {
                           arguments: "");
                     },
                     secondaryLabel: "Adicionar da galeria",
-                    secondaryOnPressed: () {})),
+                    secondaryOnPressed: () {
+                      controller.scanWithImagePicker();
+                    })),
           ),
           ValueListenableBuilder<BarcodeScannerStatus>(
             valueListenable: controller.statusNotifier,
