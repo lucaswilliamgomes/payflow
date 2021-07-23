@@ -9,7 +9,7 @@ class SplashPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final authController = AuthController();
-    authController.currentUser(context);
+    authController.currentUser(context, true);
     return Scaffold(
       backgroundColor: AppColors.background,
       body: Stack(

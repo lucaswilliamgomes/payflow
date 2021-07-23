@@ -22,9 +22,11 @@ class AuthController {
     await instance.setString("user", user.toJson());
   }
 
-  Future<void> currentUser(BuildContext context) async {
+  Future<void> currentUser(BuildContext context, bool delayed) async {
     final instance = await SharedPreferences.getInstance();
-    await Future.delayed(Duration(seconds: 2));
+    if (delayed) {
+      await Future.delayed(Duration(seconds: 2));
+    }
     if (instance.containsKey("user")) {
       final json = instance.get("user") as String;
       setUser(context, UserModel.fromJson(json));
